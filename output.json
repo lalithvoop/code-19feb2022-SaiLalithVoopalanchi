@@ -1,0 +1,62 @@
+[
+    {
+        "Gender": "Male",
+        "HeightCm": 171,
+        "WeightKg": 96,
+        "BMI Value": 32.83061454806607,
+        "BMI Details": {
+            "category": "Moderately Obese",
+            "health_risk": "Medium Risk"
+        }
+    },
+    {
+        "Gender": "Male",
+        "HeightCm": 161,
+        "WeightKg": 85,
+        "BMI Value": 32.79194475521777,
+        "BMI Details": {
+            "category": "Moderately Obese",
+            "health_risk": "Medium Risk"
+        }
+    },
+    {
+        "Gender": "Male",
+        "HeightCm": 180,
+        "WeightKg": 77,
+        "BMI Value": 23.76543209876543,
+        "BMI Details": {
+            "category": "Normal Weight",
+            "health_risk": "Low Risk"
+        }
+    },
+    {
+        "Gender": "Female",
+        "HeightCm": 166,
+        "WeightKg": 62,
+        "BMI Value": 22.49963710262738,
+        "BMI Details": {
+            "category": "Normal Weight",
+            "health_risk": "Low Risk"
+        }
+    },
+    {
+        "Gender": "Female",
+        "HeightCm": 150,
+        "WeightKg": 70,
+        "BMI Value": 31.11111111111111,
+        "BMI Details": {
+            "category": "Moderately Obese",
+            "health_risk": "Medium Risk"
+        }
+    },
+    {
+        "Gender": "Female",
+        "HeightCm": 167,
+        "WeightKg": 82,
+        "BMI Value": 29.402273297715947,
+        "BMI Details": {
+            "category": "Over Weight",
+            "health_risk": "Enhanced Risk"
+        }
+    }
+]

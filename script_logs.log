@@ -1,0 +1,5 @@
+2022-02-19 21:38:10,217 reading the input file
+2022-02-19 21:38:10,218 json file details loaded
+2022-02-19 21:38:10,219 filtering the unwanted data
+2022-02-19 21:38:10,219 Processing completed. Writing formatted data into output.json
+2022-02-19 21:38:10,223 Execution completed successfully, please look into output.json file
