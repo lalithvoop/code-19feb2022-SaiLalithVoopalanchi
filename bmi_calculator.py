@@ -38,19 +38,19 @@ def get_bmi_category_and_risk(bmi_value):
             return BMI_details.bmi.get(bmi)
     return BMI_details.bmi.get(bmi_values_list[-1])
 
-def calculate_bmi_details(json_details):
+def calculate_bmi_details(list_of_details):
     logger.info("filtering the unwanted data")
     updated_list_of_details = []
-    for each in json_details:
+    for entry in list_of_details:
         # filtering data which is in valid format
-        if each["Gender"].isalpha() == True and type(each["HeightCm"]) == int and type(each["WeightKg"]) == int:
-            height_in_mts = each["HeightCm"] / 100
-            mass = each["WeightKg"]
+        if entry["Gender"].isalpha() == True and type(entry["HeightCm"]) == int and type(entry["WeightKg"]) == int:
+            height_in_mts = entry["HeightCm"] / 100
+            mass = entry["WeightKg"]
             bmi_value = mass / (height_in_mts ** 2)
-            bmi = get_bmi_category_and_risk(bmi_value)
-            each["BMI Value"] = bmi_value
-            each["BMI Details"] = bmi
-            updated_list_of_details.append(each)
+            category_and_risk = get_bmi_category_and_risk(bmi_value)
+            entry["BMI Value"] = bmi_value
+            entry["BMI Details"] = category_and_risk
+            updated_list_of_details.append(entry)
     return updated_list_of_details
 
 if __name__ == '__main__':
@@ -67,10 +67,10 @@ if __name__ == '__main__':
         f = open('input.json')
         list_of_details = json.load(f)
         logger.info("json file details loaded")
-        json_details = calculate_bmi_details(list_of_details)
+        processed_data = calculate_bmi_details(list_of_details)
         logger.info("Processing completed. Writing formatted data into output.json")
         with open('output.json', 'w', encoding='utf-8') as f:
-            json.dump(json_details, f, ensure_ascii=False, indent=4)
+            json.dump(processed_data, f, ensure_ascii=False, indent=4)
         logger.info("Execution completed successfully, please look into output.json file")
 
     except Exception as e:
